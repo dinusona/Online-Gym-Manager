@@ -1,0 +1,2 @@
+# Online-Gym-Manager
+This project is a online gym management where the manager can manage the customers and their memberships, if they are over 60 how they can manage their height, weight and track their workout progress in general.. The UI has been designed using JavaFX for the manager to be able to check the customers and gather their information from the system. The backend has been developed using Java for the Manager to update the database with new customers, update with the new altercations or delete them.
