@@ -1,0 +1,39 @@
+.root,#rootViewTablecss{
+    -fx-background-color: #75D6E1;
+}
+#mainLablecss{
+    -fx-font-family: sans-serif;
+    -fx-font-size: 25px;
+}
+#bBikeButscn1css,#bCarButscn1css,#viewVehicleListcss{
+    -fx-background-color: #090a0c,
+    linear-gradient(#38414b 0%, #1f2419 20%, #191d12 100%),
+    linear-gradient(#20162b, #191d21),
+    radial-gradient(center 50% 0%,
+            radius 100%,
+            rgba(114,131,148,0.9),
+            rgba(255,255,255,0));
+    -fx-background-radius: 5,3,3,5;
+    -fx-background-insets: 0,0,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+
+#bAddItemcss,#backBu1css,#bDeleteItemcss,#backBu2css,#bViewcss,#backBu3css,#addcss,#bAddBikeResToDbcss {
+    -fx-background-color:
+            linear-gradient(#f2f2f2, #d6d6d6),
+            linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+            linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+#labelForPickUpcss,#labelForDropOffcss,#labelForBikeDropOffcss,#labelForBikePickUpcss,#askInputForPlateNumbercss,#askInputForBikePlateNumbercss{
+    -fx-font-family: sans-serif;
+    -fx-font-size: 15px;
+}

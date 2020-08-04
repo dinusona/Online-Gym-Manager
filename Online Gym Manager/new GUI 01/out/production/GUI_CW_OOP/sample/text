@@ -1,0 +1,71 @@
+TableView over60MemberTable = new TableView();
+        over60MemberTable.setMaxWidth(600);
+        over60MemberTable.setMaxHeight(900);
+        over60MemberTable.setLayoutX(650);
+        over60MemberTable.setLayoutY(30);
+
+        TableColumn<String, Over60Member> columnForOver60Mem1 = new TableColumn<>("memberID");
+        columnForOver60Mem1.setMinWidth(50);
+        columnForOver60Mem1.setCellValueFactory(new PropertyValueFactory<>("memberID"));
+
+
+        TableColumn<String, Over60Member> columnForOver60Mem2 = new TableColumn<>("name");
+        columnForOver60Mem2.setMinWidth(50);
+        columnForOver60Mem2.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+
+        TableColumn<String, Over60Member> columnForOver60Mem3 = new TableColumn<>("hight");
+        columnForOver60Mem3.setMinWidth(50);
+        columnForOver60Mem3.setCellValueFactory(new PropertyValueFactory<>("hight"));
+
+
+        TableColumn<String, Over60Member> columnForOver60Mem4 = new TableColumn<>("weight");
+        columnForOver60Mem4.setMinWidth(50);
+        columnForOver60Mem4.setCellValueFactory(new PropertyValueFactory<>("weight"));
+
+
+        TableColumn<String, Over60Member> columnForOver60Mem5 = new TableColumn<>("nearestBranchName");
+        columnForOver60Mem5.setMinWidth(50);
+        columnForOver60Mem5.setCellValueFactory(new PropertyValueFactory<>("nearestBranchName"));
+
+
+        TableColumn<String, Over60Member> columnForOver60Mem6 = new TableColumn<>("membershipNumber");
+        columnForOver60Mem6.setMinWidth(50);
+        columnForOver60Mem6.setCellValueFactory(new PropertyValueFactory<>("membershipNumber"));
+
+
+        TableColumn<String, Over60Member> columnForOver60Mem7 = new TableColumn<>("startMembershipDate");
+        columnForOver60Mem7.setMinWidth(50);
+        columnForOver60Mem7.setCellValueFactory(new PropertyValueFactory<>("startMembershipDate"));
+
+
+        TableColumn<String, Over60Member> columnForOver60Mem8 = new TableColumn<>("age");
+        columnForOver60Mem8.setMinWidth(50);
+        columnForOver60Mem8.setCellValueFactory(new PropertyValueFactory<>("age"));
+
+
+
+        over60MemberTable.getColumns().add(columnForOver60Mem1);
+        over60MemberTable.getColumns().add(columnForOver60Mem2);
+        over60MemberTable.getColumns().add(columnForOver60Mem3);
+        over60MemberTable.getColumns().add(columnForOver60Mem4);
+        over60MemberTable.getColumns().add(columnForOver60Mem5);
+        over60MemberTable.getColumns().add(columnForOver60Mem6);
+        over60MemberTable.getColumns().add(columnForOver60Mem7);
+        over60MemberTable.getColumns().add(columnForOver60Mem8);
+
+
+        ResultSet resultSetForOver60 = conn.createStatement().executeQuery("SELECT * FROM over60MemberDetails");
+
+        while (resultSetForStudent.next()) {
+            over60MemberTable.getItems().add(new Over60Member(resultSetForOver60.getString("memberID"),
+                    resultSetForOver60.getString("over60MemName"),
+                    resultSetForOver60.getInt("over60MemHight"),
+                    resultSetForOver60.getInt("over60MemWeight"),
+                    resultSetForOver60.getString("over60MemNearestBranchName"),
+                    resultSetForOver60.getInt("over60MemMembershipNumber"),
+                    resultSetForOver60.getInt("over60MemMembershipStartDate"),
+                    resultSetForOver60.getString("over60MemAge")));
+        }
+
+        rootForViewTables.getChildren().add(over60MemberTable);
